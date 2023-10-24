@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-21 02:12:30 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMDswODozNTowMSBQTTsyNjU0"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMTswMTo0NTo0NSBQTTsyO09NRUdBO1NFUkFQSElNOzIwMjMtMDktMjA7MDc6MTE6MjAgUE07QVJZQV9BTFBSTyBNQVggVkFMVUUgT0YgQVJSQVkgUEVSVEVNVUFOIDQuZnByZzs4NDUw"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMTswMjoxMjoyMiBQTTsxO0FTVVM7TEFQVE9QLVJET0k5MUlFOzIwMjMtMDktMjE7MDE6MzI6NDYgUE07c29hbCAyLmZwcmc7NjUxNw=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMTswMjoxMjozMCBQTTsxMjsyODA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, x, o, large, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;inputkan nilai n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="data" type="Integer" array="True" size="n"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <input variable="data[i]"/>
+            </for>
+            <assign variable="large" expression="data[1]"/>
+            <assign variable="x" expression="1"/>
+            <while expression="x&lt;=i-1">
+                <if expression="data[x]&gt;large">
+                    <then>
+                        <assign variable="large" expression="data[x]"/>
+                    </then>
+                    <else>
+                        <assign variable="x" expression="x+1"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;[&quot;" newline="False"/>
+            <for variable="o" start="1" end="n-1" direction="inc" step="1">
+                <output expression="data[o]" newline="False"/>
+                <output expression="&quot; &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;]&quot;" newline="True"/>
+            <output expression="&quot;Nilai atau angka Terbesar dari array diatas adalah :&quot;" newline="False"/>
+            <output expression="large" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

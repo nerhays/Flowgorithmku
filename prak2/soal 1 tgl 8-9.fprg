@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-08 02:36:23 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wODswMTowNDo0NiBQTTsyNjU4"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wODswMjozNjoyMyBQTTsyOzI3Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ibu, anak, ia, warisan" type="Real" array="False" size=""/>
+            <assign variable="ia" expression="6"/>
+            <assign variable="ibu" expression="1/4"/>
+            <assign variable="anak" expression="1-ibu/3"/>
+            <assign variable="anak" expression="3/12"/>
+            <assign variable="warisan" expression="ia / (ibu + anak)"/>
+            <output expression="warisan" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

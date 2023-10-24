@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-01 04:00:22 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNExDMkVWTE07MjAyMy0wOS0wMTswMzo0Mjo0NiBQTTsyNjU4"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNExDMkVWTE07MjAyMy0wOS0wMTswNDowMDoyMiBQTTsyMDsyODA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="p, l, t, X, Y" type="Integer" array="False" size=""/>
+            <input variable="p"/>
+            <input variable="l"/>
+            <input variable="t"/>
+            <assign variable="Y" expression="p * l * t"/>
+            <output expression="Y" newline="True"/>
+            <assign variable="X" expression="(p * l + p * t + t * l) * 2"/>
+            <output expression="X" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

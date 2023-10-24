@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-05 06:17:56 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMTo0NDozMCBQTTsyNjU4"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMTo0NDozMyBQTTsxO0FTVVM7TEFQVE9QLVJET0k5MUlFOzIwMjMtMDktMjc7MDc6NTY6NTIgUE07c29hbCAxLmZwcmc7NjU0NQ=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNTswNjoxNzo1NiBQTTs1OzI3Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, j, temp" type="Integer" array="False" size=""/>
+            <output expression="&quot;berapa data yang diinputkan&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="x" type="Integer" array="True" size="n"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <output expression="&quot;input data ke &quot; &amp; i+1" newline="True"/>
+                <input variable="x[i]"/>
+                <output expression="&quot;data ke &quot; &amp; i &amp; &quot; = &quot;" newline="False"/>
+                <output expression="x[i]" newline="True"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <breakpoint expression="" always="True"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <assign variable="j" expression="i + 1"/>
+                <while expression="j &lt;= n-1">
+                    <if expression="x[j] &lt; x[i]">
+                        <then>
+                            <assign variable="temp" expression="x[j]"/>
+                            <assign variable="x[j]" expression="x[i]"/>
+                            <assign variable="x[i]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="j" expression="j + 1"/>
+                </while>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <output expression="&quot;nilai data setelah di proses&quot;" newline="True"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <output expression="x[i]" newline="True"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

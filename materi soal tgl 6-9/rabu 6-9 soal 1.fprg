@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-07 06:07:07 AM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wNzswNjowMTozOCBBTTsyNjQ1"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wNzswNjowNzowNyBBTTsxOzI3NTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="data" type="Integer" array="True" size="4"/>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <assign variable="data[0]" expression="2"/>
+            <assign variable="data[1]" expression="3"/>
+            <assign variable="data[2]" expression="4"/>
+            <assign variable="data[3]" expression="5"/>
+            <assign variable="temp" expression="data[0]"/>
+            <assign variable="data[0]" expression="data[3]"/>
+            <assign variable="data[3]" expression="temp"/>
+            <output expression="data[0]" newline="True"/>
+            <output expression="data[3]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

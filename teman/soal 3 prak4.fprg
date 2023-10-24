@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Indah Tasya Kurina"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-29 10:43:40 AM"/>
+        <attribute name="created" value="SW5kYWggVGFzeWEgS3VyaW5hO0xBUFRPUC1ESzM3T0cwMTsyMDIzLTA5LTI5OzEwOjI1OjE4IEFNOzM5NTg="/>
+        <attribute name="edited" value="SW5kYWggVGFzeWEgS3VyaW5hO0xBUFRPUC1ESzM3T0cwMTsyMDIzLTA5LTI5OzEwOjQzOjQwIEFNOzE7NDA2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="daftar" type="Integer" array="True" size="1000"/>
+            <declare name="i, PanjangTerpanjang, PanjangSekarang, IndeksTerpanjang, IndeksSekarang" type="Integer" array="False" size=""/>
+            <assign variable="PanjangTerpanjang" expression="0"/>
+            <assign variable="PanjangSekarang" expression="1"/>
+            <assign variable="IndeksTerpanjang" expression="0"/>
+            <assign variable="IndeksSekarang" expression="0"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <input variable="daftar [i]"/>
+            </for>
+            <for variable="i" start="1" end="19" direction="inc" step="1">
+                <if expression="daftar[i]&gt;daftar[i-1]">
+                    <then>
+                        <assign variable="PanjangSekarang" expression="PanjangSekarang+1"/>
+                    </then>
+                    <else>
+                        <if expression="PanjangSekarang&gt;PanjangTerpanjang">
+                            <then>
+                                <assign variable="PanjangTerpanjang" expression="PanjangSekarang"/>
+                                <assign variable="IndeksTerpanjang" expression="IndeksSekarang"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="PanjangSekarang" expression="1"/>
+                        <assign variable="IndeksSekarang" expression="i"/>
+                    </else>
+                </if>
+            </for>
+            <for variable="i" start="IndeksTerpanjang" end="IndeksTerpanjang+PanjangTerpanjang-1" direction="inc" step="1">
+                <output expression="daftar[i]" newline="True"/>
+                <output expression="&quot; &quot;" newline="True"/>
+            </for>
+            <output expression="&quot;(&quot;" newline="True"/>
+            <output expression="PanjangTerpanjang" newline="True"/>
+            <output expression="&quot;)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

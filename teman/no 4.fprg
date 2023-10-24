@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 10:30:29 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtQjk3S0xQU0w7MjAyMy0wOS0yODswOTo1MDowNSBQTTsyNjgy"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQjk3S0xQU0w7MjAyMy0wOS0yODsxMDozMDoyOSBQTTsyOzI3ODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, temp, d, Bf" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="2"/>
+            <output expression="&quot;bilangan bilangan Fibonacci ke 1 &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;bilangan bilangan Fibonacci ke 2 &quot;" newline="True"/>
+            <input variable="b"/>
+            <while expression="c&lt;=10">
+                <assign variable="temp" expression="a+b"/>
+                <output expression="temp" newline="True"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="temp"/>
+                <assign variable="d" expression="c+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

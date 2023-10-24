@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 04:10:42 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xNTswMjozNDo0MiBQTTsyNjU2"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xNTswNDoxMDo0MiBQTTsxNzsyODE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cuaca" type="String" array="False" size=""/>
+            <declare name="j, w, tarif" type="Integer" array="False" size=""/>
+            <output expression="&quot;cuaca&quot;" newline="True"/>
+            <input variable="cuaca"/>
+            <output expression="&quot;jarak&quot;" newline="True"/>
+            <input variable="j"/>
+            <output expression="&quot;waktu&quot;" newline="True"/>
+            <input variable="w"/>
+            <assign variable="tarif" expression="10000"/>
+            <if expression="j &lt;= 3">
+                <then>
+                    <assign variable="tarif" expression="tarif"/>
+                </then>
+                <else>
+                    <assign variable="tarif" expression="tarif + ((j - 3) * 2000)"/>
+                </else>
+            </if>
+            <if expression="w &lt;= 2*j">
+                <then>
+                    <assign variable="tarif" expression="tarif"/>
+                </then>
+                <else>
+                    <if expression="2*j &gt; w">
+                        <then>
+                            <assign variable="tarif" expression="tarif + ((2 * j - w) * 1000)"/>
+                        </then>
+                        <else>
+                            <assign variable="tarif" expression="tarif + ((w - (2 * j)) * 1000)"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="cuaca == &quot;hujan&quot;">
+                <then>
+                    <assign variable="tarif" expression="tarif * 115/100"/>
+                </then>
+                <else>
+                    <assign variable="tarif" expression="tarif"/>
+                </else>
+            </if>
+            <output expression="tarif" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

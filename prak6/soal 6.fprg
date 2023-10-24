@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-07 06:39:28 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNjswMzozMzoxOCBQTTsyNjUx"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNjswMzozMzoyMCBQTTsxO0FTVVM7TEFQVE9QLVJET0k5MUlFOzIwMjMtMTAtMDY7MDM6MDA6MDkgUE07c29hbCAzLmZwcmc7NjUwNg=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNzswNjozOToyOCBQTTs1OzI3NzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, result" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="x" type="Integer" array="True" size="n"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <output expression="&quot;data array ke-&quot; &amp; i+1" newline="True"/>
+                <input variable="x[i]"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <call expression="NilaiMin(x,n)"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <output expression="x[i]" newline="True"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+    <function name="NilaiMin" type="None" variable="hasil">
+        <parameters>
+            <parameter name="data" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil, i, kecil" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="kecil" expression="data[0]"/>
+            <while expression="i &lt;= n-1">
+                <if expression="data[i] &lt; kecil">
+                    <then>
+                        <assign variable="kecil" expression="data[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <assign variable="data[i]" expression="data[i] - kecil"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

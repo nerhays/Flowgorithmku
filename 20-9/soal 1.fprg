@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-21 02:12:49 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMDswNjoyNDoxMSBQTTsyNjUx"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMDswNzo1MzozOCBQTTsxO0FTVVM7TEFQVE9QLVJET0k5MUlFOzIwMjMtMDktMjA7MDY6MjQ6MTEgUE07NTQ4MQ=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMTswMjoxMjo0OSBQTTsxMTsyODEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, jumlah" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="genap" type="Boolean" array="False" size=""/>
+            <assign variable="genap" expression="true"/>
+            <assign variable="jumlah" expression="0"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <assign variable="genap" expression="!genap"/>
+                <if expression="genap = true">
+                    <then/>
+                    <else>
+                        <assign variable="jumlah" expression="jumlah + i"/>
+                        <output expression="&quot;ini loop ke-&quot; &amp; i &amp; &quot;  jumlah nya   &quot; &amp; jumlah" newline="True"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;jadi jumlah bilangan gasal kurang dari n adalah  &quot; &amp; jumlah" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

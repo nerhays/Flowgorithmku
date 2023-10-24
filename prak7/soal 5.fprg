@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 07:50:36 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xMzswNDowMzowMiBQTTsyNjQw"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xMzswNDowNDo0MSBQTTsyO0FTVVM7TEFQVE9QLVJET0k5MUlFOzIwMjMtMTAtMTM7MDI6MDA6MjMgUE07c29hbCAzLmZwcmc7NjUwMA=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xNTswNzo1MDozNiBQTTszOzI3NjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;inputkan bilangan bulat yang ingin di faktorkan&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;banyak nya faktor dari bilangan bulat &quot; &amp; n &amp; &quot; adalah &quot;" newline="False"/>
+            <output expression="rekursif(n, 1)" newline="True"/>
+        </body>
+    </function>
+    <function name="rekursif" type="Integer" variable="result">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="tambah" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result, x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="1"/>
+            <if expression="tambah &lt;= n">
+                <then>
+                    <if expression="n % tambah == 0">
+                        <then>
+                            <assign variable="result" expression="x"/>
+                        </then>
+                        <else>
+                            <assign variable="result" expression="0"/>
+                        </else>
+                    </if>
+                    <assign variable="result" expression="result + rekursif(n, tambah+1)"/>
+                </then>
+                <else>
+                    <assign variable="result" expression="0"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

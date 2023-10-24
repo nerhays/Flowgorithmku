@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-29 03:18:50 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMTowNzozMSBQTTsyNjU4"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMToyMDowNyBQTTsxO0FTVVM7TEFQVE9QLUI5N0tMUFNMOzIwMjMtMDktMjg7MDk6NTA6MDUgUE07bm8gNC5mcHJnOzYzNDY="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMzoxODo1MCBQTTs2OzI3NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, i, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;bilangan bilangan Fibonacci ke 1 &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;bilangan bilangan Fibonacci ke 2 &quot;" newline="True"/>
+            <input variable="b"/>
+            <assign variable="i" expression="0"/>
+            <output expression="a" newline="True"/>
+            <output expression="b" newline="True"/>
+            <while expression="i &lt; 9">
+                <assign variable="c" expression="a + b"/>
+                <output expression="c" newline="True"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="c"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

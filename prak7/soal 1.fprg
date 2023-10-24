@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 07:42:46 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xMzsxMjo0NTo1OCBQTTsyNjU2"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xNTswNzo0Mjo0NiBQTTsyOzI3NjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;inputkan bilangan bulat&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="max(n)" newline="True"/>
+        </body>
+    </function>
+    <function name="max" type="Integer" variable="result">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result, x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="0"/>
+            <if expression="x &lt; n">
+                <then>
+                    <assign variable="x" expression="n % 10"/>
+                    <if expression="x &gt; max(n/10)">
+                        <then>
+                            <assign variable="result" expression="x"/>
+                        </then>
+                        <else>
+                            <assign variable="result" expression="max(n/10)"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="result" expression="x"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

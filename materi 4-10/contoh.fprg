@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 03:31:42 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswMzoyNzoxOSBQTTsyNjUz"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswMzozMTo0MiBQTTsxOzI3NTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, hasil, mul" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <input variable="y"/>
+            <assign variable="hasil" expression="mul(x, y)"/>
+            <output expression="hasil" newline="True"/>
+        </body>
+    </function>
+    <function name="mul" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+            <parameter name="y" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <assign variable="hasil" expression="x * y"/>
+        </body>
+    </function>
+</flowgorithm>

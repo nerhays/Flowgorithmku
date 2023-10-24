@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-07 06:47:17 AM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wNzswNjoxNjoyNCBBTTsyNjQ2"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wNzswNjo0NzoxNyBBTTs0OzI3NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilih" type="String" array="False" size=""/>
+            <declare name="a, b, c" type="Boolean" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <input variable="pilih"/>
+            <if expression="pilih = &quot;a&quot;">
+                <then>
+                    <if expression="a and b and c = true">
+                        <then>
+                            <output expression="&quot;True&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;False&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="pilih = &quot;b&quot;">
+                        <then>
+                            <if expression="a and b or c = true">
+                                <then>
+                                    <output expression="&quot;True&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;False&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="pilih = &quot;c&quot;">
+                                <then>
+                                    <if expression="a or b or c = true">
+                                        <then>
+                                            <output expression="&quot;True&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;False&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="pilih = &quot;d&quot;">
+                                        <then>
+                                            <if expression="a and b or (not c) = true">
+                                                <then>
+                                                    <output expression="&quot;True&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;False&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-08 02:48:25 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wODswMjozNjoyNSBQTTsyNjYx"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wODswMjo0ODoyNSBQTTsxOzI3NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, bil1, bil2, bil3, k" type="Integer" array="False" size=""/>
+            <assign variable="bil1" expression="6"/>
+            <assign variable="bil2" expression="9"/>
+            <assign variable="bil3" expression="11"/>
+            <input variable="n"/>
+            <assign variable="k" expression="4 * n-26"/>
+            <output expression="n" newline="True"/>
+            <output expression="k" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

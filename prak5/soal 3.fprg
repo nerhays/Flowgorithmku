@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 07:03:10 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNTswNjo1MDoxMCBQTTsyNjQ0"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xNTswNzowMzoxMCBQTTs1OzI3NTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="data" type="Integer" array="True" size="100000"/>
+            <declare name="i, sum, panjangterpanjang, panjangsekarang, indeksterpanjang, indekssekarang, penjumlahanterpangjang, penjumlahansekarang" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt; 20">
+                <input variable="data[i]"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="data[20]" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="penjumlahansekarang" expression="0"/>
+            <assign variable="panjangsekarang" expression="1"/>
+            <assign variable="panjangterpanjang" expression="0"/>
+            <assign variable="indeksterpanjang" expression="0"/>
+            <assign variable="indekssekarang" expression="0"/>
+            <assign variable="penjumlahanterpangjang" expression="0"/>
+            <while expression="i &lt;= 20">
+                <if expression="data[i] &gt;= data[i-1]">
+                    <then>
+                        <assign variable="penjumlahansekarang" expression="penjumlahansekarang + data[i-1]"/>
+                        <assign variable="panjangsekarang" expression="panjangsekarang + 1"/>
+                        <assign variable="i" expression="i + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="penjumlahansekarang" expression="penjumlahansekarang + data[i-1]"/>
+                        <if expression="penjumlahansekarang &gt; penjumlahanterpangjang">
+                            <then>
+                                <assign variable="penjumlahanterpangjang" expression="penjumlahansekarang"/>
+                                <assign variable="panjangterpanjang" expression="panjangsekarang"/>
+                                <assign variable="indeksterpanjang" expression="indekssekarang"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="penjumlahansekarang" expression="0"/>
+                        <assign variable="panjangsekarang" expression="1"/>
+                        <assign variable="indekssekarang" expression="i"/>
+                        <assign variable="i" expression="i + 1"/>
+                    </else>
+                </if>
+            </while>
+            <for variable="i" start="indeksterpanjang" end="indeksterpanjang + panjangterpanjang - 1" direction="inc" step="1">
+                <output expression="data[i]" newline="True"/>
+            </for>
+            <output expression="&quot;( &quot; &amp; penjumlahanterpangjang &amp; &quot; )&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

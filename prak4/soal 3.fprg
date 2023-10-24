@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-29 06:41:05 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswNjozMzowOSBQTTsyNjY3"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswNjozMzoxMyBQTTsxO0luZGFoIFRhc3lhIEt1cmluYTtMQVBUT1AtREszN09HMDE7MjAyMy0wOS0yOTsxMDoyNToxOCBBTTtzb2FsIDMgcHJhazQuZnByZzs4MzUx"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswNjo0MTowNSBQTTsyOzI3NzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="daftar" type="Integer" array="True" size="1000"/>
+            <declare name="i, p, ps, it, is" type="Integer" array="False" size=""/>
+            <assign variable="p" expression="0"/>
+            <assign variable="ps" expression="1"/>
+            <assign variable="it" expression="0"/>
+            <assign variable="is" expression="0"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <input variable="daftar[i]"/>
+            </for>
+            <for variable="i" start="1" end="19" direction="inc" step="1">
+                <if expression="daftar[i]&gt;daftar[i-1]">
+                    <then>
+                        <assign variable="ps" expression="ps + 1"/>
+                    </then>
+                    <else>
+                        <if expression="ps &gt; p">
+                            <then>
+                                <assign variable="p" expression="ps"/>
+                                <assign variable="it" expression="is"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="ps" expression="1"/>
+                        <assign variable="is" expression="i"/>
+                    </else>
+                </if>
+            </for>
+            <for variable="i" start="it" end="it + p - 1" direction="inc" step="1">
+                <output expression="daftar[i]" newline="True"/>
+            </for>
+            <output expression="&quot;(&quot;" newline="True"/>
+            <output expression="p" newline="True"/>
+            <output expression="&quot;)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

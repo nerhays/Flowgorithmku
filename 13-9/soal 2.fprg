@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-13 04:04:39 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xMzswMzo1ODo1NyBQTTsyNjY3"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xMzswNDowNDozOSBQTTsxOzI3Njc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tinggi" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan tinggi anda dalam cm&quot;" newline="True"/>
+            <input variable="tinggi"/>
+            <if expression="tinggi &gt; 120">
+                <then>
+                    <if expression="tinggi &gt; 150">
+                        <then>
+                            <output expression="&quot;tinggi&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;sedang&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;pendek&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

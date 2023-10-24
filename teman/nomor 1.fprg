@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="OMEGA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-27 08:17:39 PM"/>
+        <attribute name="created" value="T01FR0E7U0VSQVBISU07MjAyMy0wOS0yNzswNzo1Njo1MiBQTTsyMjU2"/>
+        <attribute name="edited" value="T01FR0E7U0VSQVBISU07MjAyMy0wOS0yNzswODoxNzozOSBQTTsxOzIzNjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, k, j, temp" type="Integer" array="False" size=""/>
+            <declare name="a" type="Integer" array="True" size="10"/>
+            <input variable="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="k"/>
+                <assign variable="a[i]" expression="k"/>
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <breakpoint expression="" always="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="n-1" end="i+1" direction="dec" step="1">
+                    <if expression="a[j] &lt; a[j-1]">
+                        <then>
+                            <assign variable="temp" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[j-1]"/>
+                            <assign variable="a[j-1]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Ter urutkan&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <comment text=""/>
+        </body>
+    </function>
+</flowgorithm>

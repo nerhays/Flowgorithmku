@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-08 04:24:05 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wODswMjo1NDoxMCBQTTsyNjU1"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wODswNDoyNDowNSBQTTs4OzI3NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hb, ongkir, untung, hj, pk, hu, pongkir" type="Real" array="False" size=""/>
+            <input variable="hb"/>
+            <input variable="pongkir"/>
+            <input variable="untung"/>
+            <assign variable="ongkir" expression="hb * pongkir/100"/>
+            <assign variable="hj" expression="hb+untung+ongkir"/>
+            <assign variable="hu" expression="hj - hb"/>
+            <assign variable="pk" expression="hu/hb"/>
+            <output expression="pk" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

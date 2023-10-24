@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 07:24:07 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswNzoxODowMiBQTTsyNjQ5"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswNzoxOTo1NiBQTTsxO09NRUdBO1NFUkFQSElNOzIwMjMtMTAtMDQ7MDY6MDI6MjMgUE07UEVSVEVNVUFOIDZfNDM0MjMxMDc3X0FSWUFfTk9NT1IgMi5mcHJnOzc4OTQ="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswNzoyNDowNyBQTTsxOzI3NTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, result, temp" type="Integer" array="False" size=""/>
+            <declare name="data" type="Integer" array="True" size="5"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Masukkan Nillai untuk array ke-&quot;&amp;i+1" newline="True"/>
+                <input variable="data[i]"/>
+            </for>
+            <output expression="&quot;Data Array : &quot;" newline="False"/>
+            <output expression="&quot; [&quot;&amp;&quot; &quot;&amp;data[0]&amp;&quot; &quot;&amp;data[1]&amp;&quot; &quot;&amp;data[2]&amp;&quot; &quot;&amp;data[3]&amp;&quot; &quot;&amp;data[4]&amp;&quot; &quot;&amp;&quot;]&quot;" newline="True"/>
+            <assign variable="temp" expression="tukar(data[2])"/>
+            <assign variable="data[2]" expression="data[4]"/>
+            <assign variable="data[4]" expression="temp"/>
+            <output expression="&quot;Data array setelah ditukar : &quot;" newline="False"/>
+            <output expression="&quot;[&quot;&amp;&quot; &quot;&amp;data[0]&amp;&quot; &quot;&amp;data[1]&amp;&quot; &quot;&amp;data[2]&amp;&quot; &quot;&amp;data[3]&amp;&quot; &quot;&amp;data[4]&amp;&quot; &quot;&amp;&quot;]&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="tukar" type="Integer" variable="menukar">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="menukar" type="Integer" array="False" size=""/>
+            <assign variable="menukar" expression="x"/>
+        </body>
+    </function>
+</flowgorithm>

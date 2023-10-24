@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS X441MA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-29 02:41:58 PM"/>
+        <attribute name="created" value="QVNVUyBYNDQxTUE7QVNVUy1QQzsyMDIzLTA5LTI5OzAyOjIwOjM2IFBNOzI1MjM="/>
+        <attribute name="edited" value="QVNVUyBYNDQxTUE7QVNVUy1QQzsyMDIzLTA5LTI5OzAyOjQxOjU4IFBNOzE7MjYzOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="digit" type="Integer" array="True" size="8"/>
+            <declare name="tanggal, tahun, i, temp" type="Integer" array="False" size=""/>
+            <declare name="bulan" type="String" array="False" size=""/>
+            <output expression="&quot;input tanggal&quot;" newline="True"/>
+            <input variable="tanggal"/>
+            <assign variable="digit[0]" expression="tanggal/10"/>
+            <assign variable="digit[1]" expression="tanggal%10"/>
+            <output expression="&quot;input bulan&quot;" newline="True"/>
+            <input variable="bulan"/>
+            <assign variable="temp" expression="1"/>
+            <if expression="bulan==&quot;januari&quot;">
+                <then>
+                    <assign variable="digit[2]" expression="0"/>
+                    <assign variable="digit[3]" expression="1"/>
+                </then>
+                <else>
+                    <if expression="bulan==&quot;februari&quot;">
+                        <then>
+                            <assign variable="digit[2]" expression="0"/>
+                            <assign variable="digit[3]" expression="2"/>
+                        </then>
+                        <else>
+                            <if expression="bulan==&quot;maret&quot;">
+                                <then>
+                                    <assign variable="digit[2]" expression="0"/>
+                                    <assign variable="digit[3]" expression="3"/>
+                                </then>
+                                <else>
+                                    <if expression="bulan==&quot;april&quot;">
+                                        <then>
+                                            <assign variable="digit[2]" expression="0"/>
+                                            <assign variable="digit[3]" expression="4"/>
+                                        </then>
+                                        <else>
+                                            <if expression="bulan==&quot;mei&quot;">
+                                                <then>
+                                                    <assign variable="digit[2]" expression="0"/>
+                                                    <assign variable="digit[3]" expression="5"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="bulan==&quot;juni&quot;">
+                                                        <then>
+                                                            <assign variable="digit[2]" expression="0"/>
+                                                            <assign variable="digit[3]" expression="6"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="bulan==&quot;juli&quot;">
+                                                                <then>
+                                                                    <assign variable="digit[2]" expression="0"/>
+                                                                    <assign variable="digit[3]" expression="7"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="bulan==&quot;agustus&quot;">
+                                                                        <then>
+                                                                            <assign variable="digit[2]" expression="0"/>
+                                                                            <assign variable="digit[3]" expression="8"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="bulan==&quot;september&quot;">
+                                                                                <then>
+                                                                                    <assign variable="digit[2]" expression="0"/>
+                                                                                    <assign variable="digit[3]" expression="9"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="bulan==&quot;oktober&quot;">
+                                                                                        <then>
+                                                                                            <assign variable="digit[2]" expression="1"/>
+                                                                                            <assign variable="digit[3]" expression="0"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <if expression="bulan==&quot;november&quot;">
+                                                                                                <then>
+                                                                                                    <assign variable="digit[2]" expression="1"/>
+                                                                                                    <assign variable="digit[3]" expression="1"/>
+                                                                                                </then>
+                                                                                                <else>
+                                                                                                    <assign variable="digit[2]" expression="1"/>
+                                                                                                    <assign variable="digit[3]" expression="2"/>
+                                                                                                </else>
+                                                                                            </if>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;masukkan tahun&quot;" newline="True"/>
+            <input variable="tahun"/>
+            <for variable="i" start="7" end="4" direction="dec" step="1">
+                <assign variable="digit[1]" expression="tahun%10"/>
+                <assign variable="tahun" expression="tahun/10"/>
+            </for>
+            <if expression="digit[7]==digit[0]&amp;&amp;digit[6]==digit[1]&amp;&amp;digit[5]==digit[2]&amp;&amp;digit[4]==digit[3]&amp;&amp;digit[3]==digit[4]">
+                <then>
+                    <output expression="&quot;polindrome&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;bukan polindrome&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

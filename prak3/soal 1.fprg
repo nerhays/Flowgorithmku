@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 02:45:47 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xNTsxMjo1OToyOCBQTTsyNjY4"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xNTswMjo0NTo0NyBQTTs5OzI3Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x1, x2, y1, y2, r1, r2, p" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukan x1&quot;" newline="True"/>
+            <input variable="x1"/>
+            <output expression="&quot;Masukan x2&quot;" newline="True"/>
+            <input variable="x2"/>
+            <output expression="&quot;Masukan y1&quot;" newline="True"/>
+            <input variable="y1"/>
+            <output expression="&quot;Masukan y2&quot;" newline="True"/>
+            <input variable="y2"/>
+            <output expression="&quot;Masukan r1&quot;" newline="True"/>
+            <input variable="r1"/>
+            <output expression="&quot;Masukan r2&quot;" newline="True"/>
+            <input variable="r2"/>
+            <assign variable="p" expression="sqrt((x1-x2)^2 + (y1-y2)^2)"/>
+            <if expression="p &gt; r1 + r2">
+                <then>
+                    <output expression="&quot;P1&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="p == r1 + r2">
+                        <then>
+                            <output expression="&quot;P2&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="r1 - r2 &lt; p">
+                                <then>
+                                    <output expression="&quot;P3&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="p == r2 &amp;&amp; r1 &gt; r2">
+                                        <then>
+                                            <output expression="&quot;P4&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="p &lt; r1+r2">
+                                                <then>
+                                                    <output expression="&quot;P5&quot;" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

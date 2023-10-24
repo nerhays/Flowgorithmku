@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-30 08:30:01 AM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMjozNDoxNyBQTTsyNjYz"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMzozNzozMSBQTTsxO0FTVVM7TEFQVE9QLUI5N0tMUFNMOzIwMjMtMDktMjg7MTA6MzU6MDMgUE07bm8gNVsxXVsxXS5mcHJnOzY4MTM="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswNzoxODoyMSBQTTsxO0FTVVM7TEFQVE9QLUI5N0tMUFNMOzIwMjMtMDktMjg7MTA6MzU6MDMgUE07bm9fNVsxXVsyXS5mcHJnOzY4Nzk="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0zMDswODozMDowMSBBTTs4OzI3NTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, bil, x" type="Integer" array="False" size=""/>
+            <declare name="y" type="Boolean" array="True" size="1000"/>
+            <assign variable="bil" expression="0"/>
+            <output expression="&quot;inputkan bilangan positif&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i &lt;= 999">
+                <assign variable="y[i]" expression="false"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="x" expression="1"/>
+            <while expression="bil &lt;= n">
+                <assign variable="bil" expression="bil + x"/>
+                <assign variable="x" expression="x + 1"/>
+                <assign variable="y[bil]" expression="true"/>
+            </while>
+            <assign variable="i" expression="1"/>
+            <while expression="i &lt;= n">
+                <if expression="y[i]">
+                    <then>
+                        <output expression="&quot;angka &quot; &amp; i &amp; &quot; merupakan angka segitiga&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;angka &quot; &amp; i &amp; &quot; bukan merupakan angka segitiga&quot;" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

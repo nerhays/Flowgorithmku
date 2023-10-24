@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-22 03:25:28 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMjswMjo0NDo0MyBQTTsyNjU2"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMjswMzoyNToyOCBQTTszOzI3Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, bb" type="Real" array="False" size=""/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;input berat bebek ke &quot; &amp; i" newline="True"/>
+                <input variable="bb"/>
+                <if expression="bb &gt; 2">
+                    <then>
+                        <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Obesistas&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="1.5 &lt;= bb">
+                            <then>
+                                <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Gemuk&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="1 &lt;= bb">
+                                    <then>
+                                        <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Standard&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="0.2 &lt;=  bb">
+                                            <then>
+                                                <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Langsing&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="bb &lt; 0.2">
+                                                    <then>
+                                                        <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Kurus&quot;" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

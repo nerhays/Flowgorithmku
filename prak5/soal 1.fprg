@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-29 02:29:51 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMjoyNjozNCBQTTsyNjYz"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMjoyNjozNiBQTTsxO3NoZW5keTtMQVBUT1AtTEs0TERJMEg7MjAyMy0wOS0yODsxMjoxNjoyMyBQTTtOT01FUiAxWzFdLmZwcmc7NzA1Mg=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMjoyNzozMCBQTTsyO0FTVVM7TEFQVE9QLVJET0k5MUlFOzIwMjMtMDktMjk7MDE6NDQ6MzAgUE07c29hbCAyLmZwcmc7NjUzNQ=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yOTswMjoyOTo1MSBQTTsxOzI3NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, temp" type="Integer" array="False" size=""/>
+            <declare name="X, Y" type="Integer" array="True" size="5"/>
+            <declare name="Z" type="Integer" array="True" size="10"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;5">
+                <output expression="&quot;input data array x ke &quot; &amp; i" newline="True"/>
+                <input variable="X[i]"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;5">
+                <output expression="&quot;input data array y ke &quot; &amp; i" newline="True"/>
+                <input variable="Y[i]"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;5">
+                <assign variable="Z[i]" expression="X[i]"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="j" expression="0"/>
+            <while expression="i&lt;10">
+                <assign variable="Z[i]" expression="Y[j]"/>
+                <assign variable="j" expression="j+1"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;10">
+                <assign variable="j" expression="0"/>
+                <while expression="j&lt;9">
+                    <if expression="Z[j] &gt; Z[j+1]">
+                        <then>
+                            <assign variable="temp" expression="Z[j]"/>
+                            <assign variable="Z[j]" expression="Z[j+1]"/>
+                            <assign variable="Z[j+1]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="j" expression="j+1"/>
+                </while>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;10">
+                <output expression="Z[i]" newline="True"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

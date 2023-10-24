@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-22 02:37:18 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMjswMToyNToxNSBQTTsyNjUz"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMjswMjozNzoxOCBQTTsxOzI3Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tb, bb, i, rtotal, jbh, sbh, b9, b10" type="Real" array="False" size=""/>
+            <assign variable="tb" expression="0"/>
+            <for variable="i" start="0" end="7" direction="inc" step="1">
+                <output expression="&quot;inputkan berat bebek&quot;" newline="True"/>
+                <input variable="bb"/>
+                <assign variable="tb" expression="bb + tb"/>
+            </for>
+            <output expression="&quot;inputkan rtotal&quot;" newline="True"/>
+            <input variable="rtotal"/>
+            <output expression="&quot;inputkan sbh&quot;" newline="True"/>
+            <input variable="sbh"/>
+            <assign variable="jbh" expression="(10 * rtotal) - tb"/>
+            <assign variable="b9" expression="(sbh + jbh) / 2"/>
+            <assign variable="b10" expression="jbh - b9"/>
+            <output expression="&quot;berat bebek 9 = &quot; &amp; b9" newline="True"/>
+            <output expression="&quot;berat bebek 10 = &quot; &amp; b10" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

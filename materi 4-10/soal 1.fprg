@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 07:17:55 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswNjoxMjoxMSBQTTsyNjQy"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswNzoxMDowOCBQTTsyO0RFTEw7REVTS1RPUC02T0xLSVNNOzIwMjMtMTAtMDQ7MDM6MDk6MDEgUE07UEVSVEVNVUFOIDZfNDM0MjMxMDc3X0FSWUFfTk9NT1IgMS5mcHJnOzgzMDk="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswNzoxNzo1NSBQTTsxOzI3NjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, min, result" type="Integer" array="False" size=""/>
+            <output expression="&quot;berapa bilangan array yang diinput?&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="bil" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;masukkan array ke &quot; &amp; i+1" newline="True"/>
+                <input variable="bil[i]"/>
+            </for>
+            <assign variable="result" expression="minArray(bil,n)"/>
+            <output expression="&quot;nilai minimum dari &quot; &amp; n &amp; &quot; array adalah &quot; &amp; result" newline="True"/>
+        </body>
+    </function>
+    <function name="min" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+            <parameter name="y" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <if expression="x &lt; y">
+                <then>
+                    <assign variable="hasil" expression="x"/>
+                </then>
+                <else>
+                    <assign variable="hasil" expression="y"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="minArray" type="Integer" variable="nmin">
+        <parameters>
+            <parameter name="data" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="nmin, i" type="Integer" array="False" size=""/>
+            <assign variable="nmin" expression="data[0]"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="nmin" expression="min(data[i], nmin)"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

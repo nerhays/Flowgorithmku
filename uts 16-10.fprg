@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-16 10:56:41 AM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xNjsxMDoyNTo1MCBBTTsyNjMy"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xNjsxMDo1NDo1NSBBTTs0O0FTVVM7TEFQVE9QLVJET0k5MUlFOzIwMjMtMDktMjk7MDE6NDQ6MzAgUE07c29hbCAyLmZwcmc7NjUxNg=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xNjsxMDo1Njo0MSBBTTsxOzI3NDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, temp, j" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="data" type="Integer" array="True" size="n"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <input variable="data[i]"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <breakpoint expression="" always="True"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <assign variable="j" expression="i + 1"/>
+                <while expression="j &lt;= n-1">
+                    <if expression="data[j] &lt; data[i]">
+                        <then>
+                            <assign variable="temp" expression="data[j]"/>
+                            <assign variable="data[j]" expression="data[i]"/>
+                            <assign variable="data[i]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="j" expression="j + 1"/>
+                </while>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <output expression="data[i]" newline="True"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

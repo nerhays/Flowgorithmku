@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-22 03:39:18 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMjswMzoyNTo0MSBQTTsyNjU0"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMjswMzoyNTo0NCBQTTsxO0FTVVM7TEFQVE9QLVJET0k5MUlFOzIwMjMtMDktMjI7MDI6NDQ6NDMgUE07c29hbCAyLmZwcmc7NjUyOQ=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yMjswMzozOToxOCBQTTsxOzI3NzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, bb, k, l, s, g, o" type="Real" array="False" size=""/>
+            <assign variable="k" expression="0"/>
+            <assign variable="l" expression="0"/>
+            <assign variable="s" expression="0"/>
+            <assign variable="g" expression="0"/>
+            <assign variable="o" expression="0"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;input berat bebek ke &quot; &amp; i" newline="True"/>
+                <input variable="bb"/>
+                <if expression="bb &gt; 2">
+                    <then>
+                        <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Obesistas&quot;" newline="True"/>
+                        <assign variable="o" expression="o + 1"/>
+                    </then>
+                    <else>
+                        <if expression="1.5 &lt;= bb">
+                            <then>
+                                <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Gemuk&quot;" newline="True"/>
+                                <assign variable="g" expression="g + 1"/>
+                            </then>
+                            <else>
+                                <if expression="1 &lt;= bb">
+                                    <then>
+                                        <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Standard&quot;" newline="True"/>
+                                        <assign variable="s" expression="s + 1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="0.2 &lt;=  bb">
+                                            <then>
+                                                <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Langsing&quot;" newline="True"/>
+                                                <assign variable="l" expression="l + 1"/>
+                                            </then>
+                                            <else>
+                                                <if expression="bb &lt; 0.2">
+                                                    <then>
+                                                        <output expression="&quot;bebek ke &quot; &amp; i &amp; &quot; = Kurus&quot;" newline="True"/>
+                                                        <assign variable="k" expression="k + 1"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;kurus = &quot; &amp; k" newline="True"/>
+            <output expression="&quot;langsing = &quot; &amp; l" newline="True"/>
+            <output expression="&quot;Standard = &quot; &amp; s" newline="True"/>
+            <output expression="&quot;Gemuk = &quot; &amp; g" newline="True"/>
+            <output expression="&quot;Obesitas = &quot; &amp; s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

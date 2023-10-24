@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 06:01:11 PM"/>
+        <attribute name="created" value="REVMTDtERVNLVE9QLTZPTEtJU007MjAyMy0xMC0wNDswMzowOTowMSBQTTsyNjU4"/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLTZPTEtJU007MjAyMy0xMC0wNDswMzo0NjoyMSBQTTs2OzI3NzQ="/>
+        <attribute name="edited" value="T01FR0E7U0VSQVBISU07MjAyMy0xMC0wNDswNjowMToxMSBQTTsyOzIzMzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="result, i, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan jumlah nilai array yang anda inginkan&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="arr" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Inputkan nilai array ke-&quot;&amp;(i+1)&amp;&quot; : &quot;" newline="False"/>
+                <input variable="arr[i]"/>
+            </for>
+            <assign variable="result" expression="minArray(arr,n)"/>
+            <output expression="&quot;Hasil nilai minimum di array :&quot;&amp;result" newline="True"/>
+        </body>
+    </function>
+    <function name="min" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+            <parameter name="y" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <if expression="x &lt; y">
+                <then>
+                    <assign variable="hasil" expression="x"/>
+                </then>
+                <else>
+                    <assign variable="hasil" expression="y"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="minArray" type="Integer" variable="nilMin">
+        <parameters>
+            <parameter name="data" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="nilMin, i" type="Integer" array="False" size=""/>
+            <assign variable="nilMin" expression="data[0]"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="nilMin" expression="min(data[i],nilMin)"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 12:59:18 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xMzswNDowNToxMSBQTTsyNjUw"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xNTsxMjo1OToxOCBQTTsxNTsyODI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="e1, e2, e3, total, n1, n2, n3" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan Nilai etape 1&quot;" newline="True"/>
+            <input variable="e1"/>
+            <output expression="&quot;Masukkan Nilai etape 2&quot;" newline="True"/>
+            <input variable="e2"/>
+            <output expression="&quot;Masukkan Nilai etape 3&quot;" newline="True"/>
+            <input variable="e3"/>
+            <if expression="e1 &gt;= 10">
+                <then>
+                    <assign variable="e1" expression="50"/>
+                </then>
+                <else>
+                    <if expression="e1 == 9">
+                        <then>
+                            <assign variable="e1" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="e1 == 8">
+                                <then>
+                                    <assign variable="e1" expression="65"/>
+                                </then>
+                                <else>
+                                    <if expression="e1 == 7">
+                                        <then>
+                                            <assign variable="e1" expression="70"/>
+                                        </then>
+                                        <else>
+                                            <if expression="e1 == 6">
+                                                <then>
+                                                    <assign variable="e1" expression="75"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="e1 == 5">
+                                                        <then>
+                                                            <assign variable="e1" expression="80"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="e1 == 4">
+                                                                <then>
+                                                                    <assign variable="e1" expression="85"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="e1 == 3">
+                                                                        <then>
+                                                                            <assign variable="e1" expression="90"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="e1 == 2">
+                                                                                <then>
+                                                                                    <assign variable="e1" expression="95"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="e1 == 1">
+                                                                                        <then>
+                                                                                            <assign variable="e1" expression="100"/>
+                                                                                        </then>
+                                                                                        <else/>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="e2 &gt;= 10">
+                <then>
+                    <assign variable="e2" expression="50"/>
+                </then>
+                <else>
+                    <if expression="e2 == 9">
+                        <then>
+                            <assign variable="e2" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="e2 == 8">
+                                <then>
+                                    <assign variable="e2" expression="65"/>
+                                </then>
+                                <else>
+                                    <if expression="e2 == 7">
+                                        <then>
+                                            <assign variable="e2" expression="70"/>
+                                        </then>
+                                        <else>
+                                            <if expression="e2 == 6">
+                                                <then>
+                                                    <assign variable="e2" expression="75"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="e2 == 5">
+                                                        <then>
+                                                            <assign variable="e2" expression="80"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="e2 == 4">
+                                                                <then>
+                                                                    <assign variable="e2" expression="85"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="e2 == 3">
+                                                                        <then>
+                                                                            <assign variable="e2" expression="90"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="e2 == 2">
+                                                                                <then>
+                                                                                    <assign variable="e2" expression="95"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="e2 == 1">
+                                                                                        <then>
+                                                                                            <assign variable="e2" expression="100"/>
+                                                                                        </then>
+                                                                                        <else/>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="e3 &gt;= 10">
+                <then>
+                    <assign variable="e3" expression="50"/>
+                </then>
+                <else>
+                    <if expression="e3 == 9">
+                        <then>
+                            <assign variable="e3" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="e3 == 8">
+                                <then>
+                                    <assign variable="e3" expression="65"/>
+                                </then>
+                                <else>
+                                    <if expression="e3 == 7">
+                                        <then>
+                                            <assign variable="e3" expression="70"/>
+                                        </then>
+                                        <else>
+                                            <if expression="e3 == 6">
+                                                <then>
+                                                    <assign variable="e3" expression="75"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="e3 == 5">
+                                                        <then>
+                                                            <assign variable="e3" expression="80"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="e3 == 4">
+                                                                <then>
+                                                                    <assign variable="e3" expression="85"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="e3 == 3">
+                                                                        <then>
+                                                                            <assign variable="e3" expression="90"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="e3 == 2">
+                                                                                <then>
+                                                                                    <assign variable="e3" expression="95"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="e3 == 1">
+                                                                                        <then>
+                                                                                            <assign variable="e3" expression="100"/>
+                                                                                        </then>
+                                                                                        <else/>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="e1 + e2 + e3"/>
+            <output expression="&quot;total    &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

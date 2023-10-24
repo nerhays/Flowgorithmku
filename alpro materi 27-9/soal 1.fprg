@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-27 08:49:39 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yNzswNzo1Njo1MiBQTTsyNjY5"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yNzswODo0Njo0MSBQTTsyO09NRUdBO1NFUkFQSElNOzIwMjMtMDktMjc7MDc6NTY6NTIgUE07bm9tb3IgMS5mcHJnOzYyNjM="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0yNzswODo0OTozOSBQTTsyOzI3ODY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, j, temp" type="Integer" array="False" size=""/>
+            <output expression="&quot;berapa data yang diinputkan&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="x" type="Integer" array="True" size="n"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <output expression="&quot;input data ke &quot; &amp; i" newline="True"/>
+                <input variable="x[i]"/>
+                <output expression="&quot;data ke &quot; &amp; i &amp; &quot; = &quot;" newline="False"/>
+                <output expression="x[i]" newline="True"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <breakpoint expression="" always="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="n-1" end="i+1" direction="dec" step="1">
+                    <if expression="x[j] &lt; x[j-1]">
+                        <then>
+                            <assign variable="temp" expression="x[j]"/>
+                            <assign variable="x[j]" expression="x[j-1]"/>
+                            <assign variable="x[j-1]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;nilai data setelah di proses&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="x[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

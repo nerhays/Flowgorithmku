@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 12:16:29 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xNTswMzo0NDo1NSBQTTsyNjYy"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xNTswMzo0NDo1OCBQTTsxO0FTVVM7TEFQVE9QLVJET0k5MUlFOzIwMjMtMDktMTU7MTI6NTk6MjggUE07c29hbCAxLmZwcmc7NjU0OA=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0xNjsxMjoxNjoyOSBQTTsxNDsyODIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, e, x1, x2, y1, y2, D1, b1, c1" type="Real" array="False" size=""/>
+            <declare name="keterangan" type="String" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <input variable="d"/>
+            <input variable="e"/>
+            <if expression="d &lt;= 0">
+                <then>
+                    <assign variable="b1" expression="b + d"/>
+                </then>
+                <else>
+                    <assign variable="b1" expression="b - d"/>
+                </else>
+            </if>
+            <if expression="e &lt;= 0">
+                <then>
+                    <assign variable="c1" expression="c + e"/>
+                </then>
+                <else>
+                    <assign variable="c1" expression="c - e"/>
+                </else>
+            </if>
+            <assign variable="D1" expression="(b1)^2 - 4 * a * c1"/>
+            <assign variable="x1" expression="(-b1 + (sqrt(D1))) / 2 * a"/>
+            <assign variable="x2" expression="(-b1 - (sqrt(D1))) / 2 * a"/>
+            <assign variable="y1" expression="(a*x1)^2 + (b*x1) + c"/>
+            <assign variable="y2" expression="(d * x2) + e"/>
+            <if expression="D1 &gt; 0">
+                <then>
+                    <assign variable="keterangan" expression="&quot;berpotongan&quot;"/>
+                </then>
+                <else>
+                    <if expression="D1 = 0">
+                        <then>
+                            <assign variable="keterangan" expression="&quot;bersinggungan&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="D1 &lt; 0">
+                                <then>
+                                    <assign variable="keterangan" expression="&quot;salinglepas&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;x1 =&quot; &amp; x1" newline="True"/>
+            <output expression="&quot;x2 =&quot; &amp; x2" newline="True"/>
+            <output expression="&quot;y1 =&quot; &amp; y1" newline="True"/>
+            <output expression="&quot;y2 =&quot; &amp; y2" newline="True"/>
+            <output expression="&quot;keterangan =&quot; &amp; keterangan" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

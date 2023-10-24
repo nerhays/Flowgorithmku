@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 07:46:54 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xMzswMjowMDoyMyBQTTsyNjM4"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xNTswNzo0Njo1NCBQTTs4OzI3NzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;inputkan bilangan bulat yang ingin di faktorkan&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;faktor positif dari bilangan bulat &quot; &amp; n" newline="True"/>
+            <call expression="rekursif(n, 1)"/>
+        </body>
+    </function>
+    <function name="rekursif" type="None" variable="result">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="tambah" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <if expression="tambah &lt;= n">
+                <then>
+                    <if expression="n % tambah == 0">
+                        <then>
+                            <assign variable="result" expression="tambah"/>
+                            <output expression="result" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <call expression="rekursif(n, tambah+1)"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

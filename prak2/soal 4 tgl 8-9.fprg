@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-08 04:20:24 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wODswMzoxNToyNSBQTTsyNjU5"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0wOS0wODswNDoyMDoyNCBQTTs1OzI3Njc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jam, menit, v, s, t2j, t2m, waktu, m" type="Integer" array="False" size=""/>
+            <assign variable="s" expression="100"/>
+            <assign variable="v" expression="50"/>
+            <input variable="jam"/>
+            <input variable="menit"/>
+            <assign variable="waktu" expression="s/v"/>
+            <assign variable="m" expression="(menit + 45) / 60"/>
+            <assign variable="t2j" expression="jam + waktu + m"/>
+            <assign variable="t2m" expression="(menit + 45) % 60"/>
+            <output expression="t2j &amp; &quot;jam&quot;" newline="True"/>
+            <output expression="t2m &amp; &quot;menit&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

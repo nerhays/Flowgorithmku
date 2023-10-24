@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 07:45:32 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xMzswMTo0NDo0MyBQTTsyNjQ3"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0xNTswNzo0NTozMiBQTTsyOzI3NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;inputkan bilangan yang ingin di konversi ke biner&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;setelah di konversi = &quot;" newline="True"/>
+            <call expression="converBin(n)"/>
+        </body>
+    </function>
+    <function name="converBin" type="None" variable="result">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result, x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="0"/>
+            <if expression="x &lt; n">
+                <then>
+                    <call expression="converBin(n/2)"/>
+                    <assign variable="result" expression="n % 2"/>
+                    <output expression="result" newline="False"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

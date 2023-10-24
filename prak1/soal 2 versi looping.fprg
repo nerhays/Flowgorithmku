@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-24 07:16:33 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0yNDswNzowODowMyBQTTsyNjUx"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0yNDswNzoxNjozMyBQTTsxOzI3NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, result, i, e" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <assign variable="e" expression="1"/>
+            <assign variable="result" expression="0"/>
+            <for variable="i" start="1" end="4" direction="inc" step="1">
+                <assign variable="result" expression="((x/e) % 10) + result"/>
+                <assign variable="e" expression="e * 10"/>
+            </for>
+            <output expression="result" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

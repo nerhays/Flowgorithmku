@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 03:35:15 PM"/>
+        <attribute name="created" value="REVMTDtERVNLVE9QLTZPTEtJU007MjAyMy0xMC0wNDswMzoyNDo1MSBQTTsyNjYw"/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLTZPTEtJU007MjAyMy0xMC0wNDswMzozNToxNSBQTTsxOzI3NzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="result, i" type="Integer" array="False" size=""/>
+            <assign variable="result" expression="mul(2,4)"/>
+            <output expression="&quot;Hasil perkalian 2 bilangan : &quot;&amp;result" newline="True"/>
+            <output expression="&quot;Proses looping&quot;" newline="True"/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <assign variable="result" expression="mul(i,i)"/>
+                <output expression="&quot;Hasil perkalian 2 bilangan antara &quot;&amp;i&amp;&quot; dan &quot;&amp;i&amp;&quot;: &quot;&amp;result" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="mul" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+            <parameter name="y" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <assign variable="hasil" expression="x*y"/>
+        </body>
+    </function>
+</flowgorithm>

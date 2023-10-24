@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 03:40:47 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswMzozNTozMCBQTTsyNjQ1"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNDswMzo0MDo0NyBQTTsxOzI3NTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="result, i, n, x, y" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n">
+                <input variable="x"/>
+                <input variable="y"/>
+                <assign variable="i" expression="i + 1"/>
+                <assign variable="result" expression="mul(x,y)"/>
+                <output expression="&quot;hasil ke &quot; &amp; i &amp; &quot; adalah&quot; &amp; result" newline="True"/>
+            </while>
+        </body>
+    </function>
+    <function name="mul" type="Integer" variable="result">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+            <parameter name="y" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <assign variable="result" expression="x * y"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-01 03:41:20 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtNExDMkVWTE07MjAyMy0wOS0wMTswMjo0OTo0NiBQTTsyNjY0"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtNExDMkVWTE07MjAyMy0wOS0wMTswMzo0MToyMCBQTTs1OzI3NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="R" type="Integer" array="False" size=""/>
+            <input variable="R"/>
+            <declare name="C, F" type="Integer" array="False" size=""/>
+            <assign variable="C" expression="5/4 * R"/>
+            <output expression="C" newline="True"/>
+            <assign variable="F" expression="(9/4 * R) + 32"/>
+            <output expression="F" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

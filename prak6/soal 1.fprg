@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-06 03:52:50 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNjswMToyOToyNiBQTTsyNjUz"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtUkRPSTkxSUU7MjAyMy0xMC0wNjswMzo1Mjo1MCBQTTs0OzI3NTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, m, result" type="Integer" array="False" size=""/>
+            <output expression="&quot;berapa array yang diinputkan?&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="x" type="Integer" array="True" size="n"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <output expression="&quot;masukan array ke-&quot; &amp; i+1" newline="True"/>
+                <input variable="x[i]"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="result" expression="modus(x,n)"/>
+            <output expression="&quot;nilai modus dari &quot; &amp; n &amp; &quot; data array adalah &quot; &amp; result" newline="True"/>
+        </body>
+    </function>
+    <function name="modus" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="data" type="Integer" array="True"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil, i, m, mtinggi, j" type="Integer" array="False" size=""/>
+            <assign variable="m" expression="0"/>
+            <assign variable="mtinggi" expression="0"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt;= n-1">
+                <assign variable="j" expression="i + 1"/>
+                <while expression="j &lt;= n-1">
+                    <if expression="data[j] == data[i]">
+                        <then>
+                            <assign variable="m" expression="m + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="j" expression="j + 1"/>
+                </while>
+                <if expression="m &gt;= mtinggi">
+                    <then>
+                        <assign variable="mtinggi" expression="m"/>
+                        <assign variable="hasil" expression="data[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="m" expression="0"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
